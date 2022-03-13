@@ -1,0 +1,10 @@
+{
+  "name": "typescript_tutorial",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
+}
