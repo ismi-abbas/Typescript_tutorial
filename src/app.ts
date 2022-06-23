@@ -1,11 +1,8 @@
-const express = require('express');
+class ProjectInput {
+  templateElement: HTMLTemplateElement;
 
-const app = express();
-
-const PORT = process.env.PORT || 3000;
-
-
-
-app.listen(PORT, (req: any, res: any) => {
-  console.log('Listening on port 3000');
-});
+  constructor() {
+    this.templateElement = document.getElementById('project-input');
+    this.hostElement = document.getElementById('')
+  }
+}
