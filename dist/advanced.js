@@ -47,3 +47,34 @@ let log = (message) => {
     console.log(message);
 };
 log === null || log === void 0 ? void 0 : log('Test');
+// The nullish
+let speed = null;
+let ride = {
+    // falsy value (undefined, null, '', false, 0)
+    speed: speed !== null && speed !== void 0 ? speed : 30,
+};
+// Type assertion
+let phone = document.getElementById('phone');
+let number = document.getElementById('number');
+// HTMLElement
+// HTMLInputElement
+phone.value;
+// The unknown type
+function render(document) {
+    // Narrowing
+    if (typeof document === 'string') {
+        document.toUpperCase();
+    }
+}
+// Never type - values that never occur
+function processEvents() {
+    while (true) {
+        // Read a message from a queue
+    }
+}
+function reject(message) {
+    throw new Error(message);
+}
+processEvents();
+reject('...');
+console.log('Hello World');

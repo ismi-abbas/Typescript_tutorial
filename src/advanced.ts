@@ -82,3 +82,40 @@ let log: any = (message: string) => {
   console.log(message);
 };
 log?.('Test');
+
+// The nullish
+let speed: number | null = null;
+let ride = {
+  // falsy value (undefined, null, '', false, 0)
+  speed: speed ?? 30,
+};
+
+// Type assertion
+let phone = document.getElementById('phone') as HTMLInputElement;
+let number = <HTMLInputElement>document.getElementById('number');
+// HTMLElement
+// HTMLInputElement
+phone.value;
+
+// The unknown type
+function render(document: unknown) {
+  // Narrowing
+  if (typeof document === 'string') {
+    document.toUpperCase();
+  }
+}
+
+// Never type - values that never occur
+function processEvents(): never {
+  while (true) {
+    // Read a message from a queue
+  }
+}
+
+function reject(message: string) {
+  throw new Error(message);
+}
+
+processEvents();
+reject('...');
+console.log('Hello World');
