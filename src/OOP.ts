@@ -134,10 +134,58 @@ printNames([
 	new Person('Sakura', 'Haruno'),
 	new Student('Uzumaki', 'Naruto', 'IIL170022'),
 	new Hokage('Hashirama', 'Tsunade'),
-])
+]);
 
 function printNames(people: Person[]) {
 	for (let person of people) {
 		console.log(person.fullName);
+	}
+}
+
+abstract class Shape {
+	constructor(public color: string) {}
+	abstract render(): void;
+}
+
+class Circle extends Shape {
+	constructor(color: string, public radius: number) {
+		super(color);
+	}
+	override render(): void {
+		console.log('Rendering a circle');
+	}
+}
+
+let shape = new Circle('red', 5);
+shape.render();
+
+// Interface - blueprint of an object =============================================
+// Can have property and method
+// Use camel name convention for interface
+
+// abstract class Calendar {
+// 	constructor(public year: number, public month: number) {}
+
+// 	abstract addEvent(): void;
+// 	abstract removeEnvent(): void;
+// }
+
+interface Calendar {
+	name: string;
+	addEvent(): void;
+	removeEvent(): void;
+}
+
+interface CloudCalendar extends Calendar {
+	sync(): void;
+}
+
+class GoogleCalendar implements Calendar {
+	constructor(public name: string) {}
+	addEvent(): void {
+		throw new Error('Method not implemented.');
+	}
+	removeEvent(): void {
+		throw new Error('Method not implemented.');
 	}
 }

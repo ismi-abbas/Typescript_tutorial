@@ -121,3 +121,30 @@ function printNames(people) {
         console.log(person.fullName);
     }
 }
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Circle extends Shape {
+    constructor(color, radius) {
+        super(color);
+        this.radius = radius;
+    }
+    render() {
+        console.log('Rendering a circle');
+    }
+}
+let shape = new Circle('red', 5);
+shape.render();
+class GoogleCalendar {
+    constructor(name) {
+        this.name = name;
+    }
+    addEvent() {
+        throw new Error('Method not implemented.');
+    }
+    removeEvent() {
+        throw new Error('Method not implemented.');
+    }
+}
